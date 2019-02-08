@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update Employeee</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <!-- icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--        for short cut icon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="DeleteEmployee.css">
+</head>
+
+<body >
+    
+    <div id="outerbox">
+    <div class="container">
+        <div id="form">
+            <h4 align="center">Delete Employee</h4>
+            Enter Unique User Id:<input type="text" id="userid">
+            <button class="btn waves-effect waves-light red right hoverable pulse" onclick="submitData()"><i class="material-icons left">delete</i>Delete</button>
+        </div>
+    </div>
+</div>
+    
+    <script>
+        async function submitData() {
+            try {
+                const employee_id= document.getElementById("userid").value
+                let res = await fetch(`http://localhost:8080/employee/${employee_id}`,{
+                        method: "DELETE",
+                        mode: "cors",
+                        headers: { "Content-type": "application/json;charset=utf-8" }
+                    })
+                res = await res.json();
+                console.log(res);
+            } catch (e) {
+                console.error(e);
+            }
+        }
+    </script>
+</body>
+
+</html>

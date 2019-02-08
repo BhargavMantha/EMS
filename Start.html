@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello User</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+    <!-- icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--        for short cut icon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="switch" class="container hidden"></div>
+    <div class="fixed-action-btn">
+        <p id="psetting" class="btn-floating orange btn-large pulse">
+            <i class="material-icons" id="setting">settings</i>
+        </p>
+        <ul>
+            <li>
+                <p id="pupdate" class="btn-floating blue btn-large">
+                    <i id="updateemp" class="large material-icons">update</i>
+                </p>
+            </li>
+            <li>
+                <p id="paddemployee" class="btn-floating green btn-large">
+                    <i id="addemployee" class="material-icons pulse" id="addemployee">add</i>
+                </p>
+            </li>
+            <li>
+                <p id="pshow" class="btn-floating yellow btn-large">
+                    <i id="showemp" class="material-icons">arrow_drop_down_circle</i>
+                </p>
+            </li>
+            <li>
+                <p id="pdeleteemp" class="btn-floating red btn-large">
+                    <i id="deleteemp" class="material-icons">delete</i>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <!-- <script>
+        const float = document.querySelector('.fixed-action-btn');
+        M.FloatingActionButton.init(float, {});
+    </script> -->
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="general.js"></script>
+</body>
+
+</html>
